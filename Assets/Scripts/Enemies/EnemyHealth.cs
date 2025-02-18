@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void SelfDestrut()
     {
-            Instantiate(robotExplosionVFX, transform.position, quaternion.identity);
-            Destroy(this.gameObject);
+        Instantiate(robotExplosionVFX, transform.position, quaternion.identity);
+        Destroy(this.gameObject);
     }
 }
