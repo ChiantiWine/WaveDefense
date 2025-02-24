@@ -9,7 +9,13 @@ public class GmaeManager : MonoBehaviour
     [SerializeField] GameObject youWinText;
 
     int enemiesLeft = 0;
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) //ESC를 눌렀을때
+        { 
+            Application.Quit(); //게임/앱 종료.
+        }
+    }
     const String ENEMIES_LEFT_STRING = "Enemies Left : ";
     public void AdjustEnemiesLeft(int amount)
     {
@@ -18,9 +24,9 @@ public class GmaeManager : MonoBehaviour
 
         if (enemiesLeft <= 0)
         {
-            
+
             youWinText.SetActive(true);
-        } 
+        }
     }
     public void RestartLevelButton()
     {
